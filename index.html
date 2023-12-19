@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <title>Download Grade 9 Apps</title>
+  <!-- Link Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Style the body */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    /* Style the header */
+    .header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1abc9c;
+      color: white;
+    }
+
+    /* Style the main content */
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Style the app cards */
+    .card {
+      width: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    /* Style the app icon */
+    .card img {
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      /* Add a pointer cursor on hover */
+    }
+
+    /* Style the app info */
+    .card .info {
+      padding: 20px;
+    }
+
+    /* Style the app name */
+    .card .info h3 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Style the app description */
+    .card .info p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Style the app download button */
+    .card .info a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Style the app download button on hover */
+    .card .info a:hover {
+      background-color: #16a085;
+    }
+
+    /* Style the modal */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Style the modal content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* Style the close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Grade 9 Apps</h1>
+    <p>Download the latest versions of Grade 9 apps for your device.</p>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- App card 1 -->
+    <div class="card">
+      <img src="app-icon.jpg.png" alt="App icon" id="img1">
+      <div class="info">
+        <h3>Grade 9 v3.1</h3>
+        <br>
+        <center> <a href="Grade 9 v3.1.apk" download>Download</a></center>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <!-- Link jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Link Bootstrap CDN -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the images and the modal content
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var modalTitle = document.getElementById("modal-title");
+    var modalDescription = document.getElementById("modal-description");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the image, open the modal and show the app info
+    img1.onclick = function () {
+      modal.style.display = "block";
+      modalTitle.innerHTML = "Grade 9 v3.1";
+      modalDescription.innerHTML = "This app helps you prepare for your Grade 9 exams with interactive quizzes and practice tests.";
+    }
+
+    img2.onclick = function () {
+      modal.style.display = "block";
+      modalTitle.innerHTML = "Grade 9 v3.2";
+      modalDescription.innerHTML = "This app helps you improve your Grade 9 skills with fun games and challenges.";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
